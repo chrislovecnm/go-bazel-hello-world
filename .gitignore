@@ -1,0 +1,14 @@
+bazel-bin
+bazel-genfiles
+bazel-go-bazel-hello-world
+bazel-out
+bazel-testlogs
+
+# vi
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
