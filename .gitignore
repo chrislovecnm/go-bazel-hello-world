@@ -6,7 +6,7 @@ bazel-out
 bazel-testlogs
 
 # gogland
-.idea
+.idea/*
 
 # vi
 [._]*.s[a-w][a-z]
