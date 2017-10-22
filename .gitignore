@@ -1,8 +1,12 @@
+# bazel
 bazel-bin
 bazel-genfiles
 bazel-go-bazel-hello-world
 bazel-out
 bazel-testlogs
+
+# gogland
+.idea
 
 # vi
 [._]*.s[a-w][a-z]
