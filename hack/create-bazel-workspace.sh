@@ -1,6 +1,13 @@
 #!/bin/bash
-if [ -z "$1" ] echo "please provide your projects base go path as an argument" && exit 1
+
+if [ -z "$1" ]; then 
+  echo >&2 "please provide your projects base go path as an argument."
+  ehco >&2 "For example: github.com/chrislovecnm/go-bazel-hello-world"
+  exit 1 
+fi
+
 PREFIX=$1
+
 cat > WORKSPACE <<- EOM
 git_repository(
     name = "io_bazel_rules_go",
@@ -30,7 +37,8 @@ go_repository(
     importpath = "github.com/spf13/pflag",
 )
 EOM
-cat > BUILD <<- EOM
+
+cat > BUILD <<- EOMB
 load("@io_bazel_rules_go//go:def.bzl", "go_prefix", "gazelle")
 
 go_prefix("${PREFIX}")
@@ -41,6 +49,6 @@ gazelle(
   name = "gazelle",
   command = "fix",
 )
-EOM
+EOMB
 
 echo "project WORKSPACE and BUILD files created, run gazelle to create required BUILD.bazel files"
