@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]; then 
   echo >&2 "please provide your projects base go path as an argument."
-  ehco >&2 "For example: github.com/chrislovecnm/go-bazel-hello-world"
+  echo >&2 "For example: github.com/chrislovecnm/go-bazel-hello-world"
   exit 1 
 fi
 
